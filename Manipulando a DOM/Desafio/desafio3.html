@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <div id="app">
+        <ul id="lista">
+            LISTA DE NOMES:
+        </ul>
+    </div>
+
+    <script>
+        var nomes = ["Diego", "Gabriel", "Yuri"];
+        var lista = document.getElementById('lista');
+        // console.log(listNames);
+
+        function gerarLista(nomes){
+
+            for(var i = 0; i <= 2; i++){
+                
+                var nameElement = document.createElement('li');
+                console.log(nameElement);
+                nameElement.appendChild(document.createTextNode(nomes[i]));
+                lista.appendChild(nameElement);
+            }
+
+        }
+
+        var nomeLista = gerarLista(nomes);
+        
+        
+    </script>
+</body>
+</html>

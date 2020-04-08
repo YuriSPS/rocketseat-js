@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <div id="app" style="text-align: center;">
+        <h1>DESAFIO 5</h1>
+    </div>
+
+    <script>
+        function alunoHabilidades(usuarios){
+            let iterable = new Map([[usuarios.nome]]);
+            for(let i of iterable){
+                console.log("O "+ i + " possui as habilidades: " + usuarios.habilidade.join());
+            }
+        }
+
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidade: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Yuri",
+                habilidade: ["Java", "PHP", "Javascript"]
+            }
+        ];
+
+            for(var i = 0; i <= 1; i++){
+        alunoHabilidades(usuarios[i]);
+        }
+    </script>
+</body>
+</html>

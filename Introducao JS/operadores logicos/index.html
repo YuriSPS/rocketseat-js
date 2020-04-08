@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso javascript</title>
+</head>
+<body>
+    
+    <script>
+        // AND, OR, NOT
+        var sexo = 'M', idade = 23;
+
+        //and para a resposta ser true as duas ocasioes tem que ser true
+        if (sexo ==='M' && idade >= 18) {
+            console.log('OK');
+        } 
+        // or para a resposta ser true, basta apenas uma ser true
+        if (sexo === 'M' || idade >= 18) {
+            console.log('OK');
+        }
+
+        //not
+        // if (sexo === 'M') {
+        //     var masculino = true;
+        // }else{
+        //     var masculino = false;
+        // }
+
+        // maneira de executar a estrutura if em uma unica linha e bem resumida
+        var masculino = (sexo === 'M'); //vai dar o mesmo resultado do que daria na estrutura if, pois no caso a variavel masculino tem o mesmo valor e o valor sera true automaticamente
+        console.log(masculino);
+    </script>
+</body>
+</html>

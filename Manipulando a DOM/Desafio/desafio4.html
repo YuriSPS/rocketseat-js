@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <div id="app">
+        <ul id="lista"> </ul>
+
+        <input type="text" name="inputnome">
+        <button onclick="adicionar()">Adicionar</button>
+    </div>
+
+    <script>
+        var nomes = ["Diego", "Lucas", "Yuri"] ;
+        var lista = document.querySelector('#lista');
+        console.log(lista);
+
+        
+        for(var i = 0; i <=2; i++){
+                var listName = document.createElement('li');
+                listName.appendChild(document.createTextNode(nomes[i]));
+                lista.appendChild(listName);
+
+        }
+        
+
+        var inputName = document.querySelector('input[name=inputnome]');   
+        console.log(inputName);
+        function adicionar(){
+            
+            var textName = inputName.value;
+            
+            var newNameList = document.createElement('li');
+            newNameList.appendChild(document.createTextNode(textName));
+            lista.appendChild(newNameList);
+            
+            inputName.value = "";
+        }
+
+        
+
+    </script>
+</body>
+</html>

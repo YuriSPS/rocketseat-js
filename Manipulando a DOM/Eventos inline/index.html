@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <div id="app" style="text-align: center;">
+    <h1>EVENTOS INLINE</h1>
+    <!-- quando for clicado no botao ira exibir um alerta -->
+    <button onclick="mostraAlerta()" style="margin: 10px;">Me pressione</button>
+    <br>
+    <!-- quando o mouse passa por cima do botao ira exibir um alerta -->
+    <button onmouseover="mostraAlerta()" style="margin: 10px;">Me pressione</button>
+    <br>
+    <!-- mostra que foi clicado quando for digitando no input -->
+    <input onkeypress="mostraAlerta()" style="margin: 10px;">
+    </div>
+
+    <script>
+        function mostraAlerta(){
+            alert('Botao foi clicado');
+        }
+    </script>
+</body>
+</html>

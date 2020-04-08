@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <div id="app">
+        <button id="new">QUADRADO NOVO</button>
+        <div id="square"></div>
+    </div>
+    
+    <script>
+        var btnElement = document.getElementById('new');
+        var squaresElement = document.getElementById('square');
+        
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+            return color;
+        }
+        
+        btnElement.onclick = function(){
+            var boxElement = document.createElement('div');
+            boxElement.style.marginTop = '10px';
+            boxElement.style.width = '100px';
+            boxElement.style.height = '100px';
+            boxElement.style.backgroundColor = '#4FE8CF';
+
+            //Retorna o elemento <body>, mas com a funcao appendChild ira retornar o no filho(boxElement) do no pai(body)
+            document.body.appendChild(boxElement);
+
+            boxElement.onmouseover = function(){
+                boxElement.style.backgroundColor = getRandomColor();
+            }
+
+            squaresElement.appendChild(boxElement);
+
+         }
+        
+        
+    </script>
+</body>
+</html>

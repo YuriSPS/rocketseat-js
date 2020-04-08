@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome">
+    </div>
+
+
+    <script>
+        // criacao de uma variavel que ira referenciar um link, no caso a tag <a>
+        var linkElement = document.createElement('a');
+        // e nessa variavel ira ser atribuido o site da rocketseat, no html seria algo como <a href="rocketseat.com.br">CLIQUE AQUI</a>
+        linkElement.setAttribute('href', 'https://rocketseat.com.br/');
+        //criando um texto para acessar o link
+        var textElement = document.createTextNode('Acessar site da rocketseat');
+        linkElement.appendChild(textElement);
+
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElement);
+
+        //removendo o input atraves do javascript
+        var inputElement = document.querySelector('#nome');
+        containerElement.removeChild(inputElement);
+    </script>
+</body>
+</html>

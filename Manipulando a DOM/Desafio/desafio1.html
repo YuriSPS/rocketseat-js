@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <div id="app">
+        <div style="text-align: center;"><h1>DESAFIO 1</h1></div>
+        <button class="botao">Clique aqui</button>
+        <div class="box"></div>
+    </div>
+    
+    <script>
+        var buttonElement = document.querySelector('.botao');
+        var boxElement= document.querySelector('.box');
+        console.log(buttonElement);
+        
+        
+        buttonElement.onclick = function(){
+            var newQuad = document.createElement('div');
+            newQuad.style.width = '100px';
+            newQuad.style.height = '100px';
+            newQuad.style.backgroundColor = '#4FE8CF';
+
+            //Retorna o elemento <body>, mas com a funcao appendChild ira retornar o no filho(newQuad) do no pai(body)
+            document.body.appendChild(newQuad);
+
+         }
+        
+        
+    </script>
+</body>
+</html>

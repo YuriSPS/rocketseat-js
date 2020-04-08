@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome">
+        <!-- <input type="text" name="nome" id="nome2"> -->
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+        // referenciando na variavel inputElement a tag input no html atraves do id
+        // var inputElement = document.getElementById('nome');
+        // console.log(inputElement);
+
+        // referenciando na variavel inputElement a tag input no html pela tag, no caso 'input'
+        // obs: a variavel ira retornar como vetor, caso queira somente o primeiro valor na posicao 0, ex: document.getElementsByTagName('input')[0];
+        // var inputElement = document.getElementsByTagName('input');
+        // console.log(inputElement);
+
+        // referenciando na variavel inputElement a tag input no html pelo nome definido no name
+        // obs: sempre ira retorna um vetor igual acima
+        // var inputElement = document.getElementsByClassName('nome');
+        // console.log(inputElement);
+
+        // basicamente o querySelector permite andarmos pela DOM ate encontrarmos o elemento que estamos buscando
+        // var inputElement = document.querySelector('body div#app input'); //no caso aqui seria um endereco que procuramos, que esta dentro do body, div com id app e input
+        // console.log(inputElement);
+
+        // no codigo abaixo estamos referenciando uma proprieade(name) dentro do elemento(input)
+        // var inputElement = document.querySelector('input[name=nome]');
+        // console.log(inputElement);
+
+        // no codigo abaixo ira executar caso estejamos referenciado todos ou mais de 1 elemento(no caso, input)
+        // var inputElement = document.querySelectorAll('input');
+        // console.log(inputElement);
+
+        // var btnElement = document.querySelector('button');
+        // btnElement.onclick = function(){
+        //     alert('Botao clicado');
+        // }
+
+        // basicamento a linha de codigo abaixo ira criar duas variaveis que irao referenciar o input e o button, onde quando clicar no botao ira 
+        // executar uma funcao que ira ter uma variavel que ira armazenar uma string dentro digitado dentro do input e produzir uma alerta no 
+        // browser com o mesmo valor armazenado na variavel.
+         
+        var inputElement = document.querySelector('input[name=nome]');    
+        var btnElement = document.querySelector('button.botao');
+
+        btnElement.onclick = function(){
+            var text = inputElement.value;
+
+            alert(text);
+        }
+    </script>
+</body>
+</html>
